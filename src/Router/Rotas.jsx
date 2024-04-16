@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
 
-import Home from "../Components/Home.js";
-import About from "../Components/About.js";
-import User from "../Components/User.js";
+import Home from "../Views/Home.jsx";
+import About from "../Views/About.jsx";
+import User from "../Views/User.jsx";
 
 const Rotas = () => {
     return (

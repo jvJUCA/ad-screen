@@ -1,20 +1,21 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Stack } from "react-bootstrap";
+import '../App.css';
 
 const Home = () => {
   return (
-    <div>
+    <div  className="App" style={{marginTop: "20vh"}}>
       <h1>Página Inicial</h1>
-      <nav>
-        <Stack direction="horizontal" gap={2}>
+      <header>
+      <Stack gap={2} className="mt-5 col-md-5 mx-auto">
           <Button variant="primary" href="/About">
-            Button as link
+            About
           </Button>
           <Button href="/User" variant="success">
-            Button as link
+            User
           </Button>
         </Stack>
-      </nav>
+      </header>
     </div>
   );
 };
