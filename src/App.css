@@ -13,6 +13,69 @@
   }
 }
 
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  font-size: 2rem;
+  margin: 0 1em;
+  font-family: "Poppins";
+}
+
+a {
+  cursor: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+
+.cursor {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.outer {
+  border: 1px solid #f7f7f770;
+}
+
+.inner {
+  background: #f7f7f720;
+  transition: 250ms ease-out;
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(4);
+}
+
+.inner.hover {
+  background: #f7f7f7;
+  mix-blend-mode: difference;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
