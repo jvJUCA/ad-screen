@@ -1,27 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Stack } from "react-bootstrap";
-import '../App.css';
+import Navbar from "react-bootstrap/Navbar";
+import "../App.css";
 
 const Home = () => {
   return (
-    <div  className="App" style={{marginTop: "20vh"}}>
+    <div className="App">
       <div className="cursor"></div>
-      <h1>Página Inicial</h1>
-      <header>
-      <Stack gap={2} className="mt-5 col-md-5 mx-auto">
-          <Button className="button" variant="primary" href="/About"> 
-            About
-          </Button>
-          <Button href="/User" variant="success">
-            User
-          </Button>
-        </Stack>
-      </header>
+      <Navbar expand="lg" className="mt-4">
+        <span className="text-title">AD'Screen</span>
+        <div className="mx-2 mt-1" style={{width: 2, height: 25, backgroundColor: 'white'}}></div>
+        <span className="text-subtitle">Para empreendedores</span>
+      </Navbar>
     </div>
   );
 };
-
-
-
 
 export default Home;
