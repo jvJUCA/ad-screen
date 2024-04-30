@@ -1,5 +1,5 @@
 import Navbar from "react-bootstrap/Navbar";
-import "../App.css";
+import "../index.css";
 
 const Home = () => {
   return (
