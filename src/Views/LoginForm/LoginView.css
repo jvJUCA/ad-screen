@@ -1,4 +1,4 @@
-body {
+.loginbody {
   margin: 0;
   font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -7,7 +7,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background: url(../../../public/unnamed.jpg) no-repeat;
   background-size: cover;
 }

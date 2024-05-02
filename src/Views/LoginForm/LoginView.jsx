@@ -5,7 +5,7 @@ import { FaLock } from "react-icons/fa";
 
 const LoginForm = () => {
   return (
-    <div className="loginStyl">
+    <div className="loginbody">
       <div className="cursor"></div>
       <div className="wrapper">
         <form action="">
