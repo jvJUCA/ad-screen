@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "../Views/Home.jsx";
 import About from "../Views/About.jsx";
 import User from "../Views/User.jsx";
+import Login from "../Views/LoginForm/LoginView.jsx";
 
 const Rotas = () => {
     useEffect(() => {
@@ -28,6 +29,7 @@ const Rotas = () => {
               <Route path="/" element={<Home />} />
               <Route path="/About" element={<About />} />
               <Route path="/User" element={<User />} />
+              <Route path="/Login" element={<Login />} />
            </Routes>
         </>
      );
