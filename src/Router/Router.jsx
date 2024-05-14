@@ -5,6 +5,7 @@ import Home from "../Views/Home.jsx";
 import About from "../Views/About.jsx";
 import User from "../Views/User.jsx";
 import Login from "../Views/LoginForm/LoginView.jsx";
+import Register from "../Views/RegisterForm/RegisterView.jsx";
 
 const Rotas = () => {
     useEffect(() => {
@@ -30,6 +31,7 @@ const Rotas = () => {
               <Route path="/About" element={<About />} />
               <Route path="/User" element={<User />} />
               <Route path="/Login" element={<Login />} />
+              <Route path="/Register" element={<Register />} />
            </Routes>
         </>
      );

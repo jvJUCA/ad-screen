@@ -13,6 +13,8 @@ body {
   height: 100vh;
   width: 100%;
   background: #212121;
+  /* background: url(unnamed.jpg) no-repeat;
+  background-size: cover; */
   display: flex;
 }
 
@@ -67,44 +69,6 @@ body {
   margin-top: 1vh;
 }
 
-.slogan {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #fff;
-  justify-content: start;
-  text-align: justify;
-  font-size: 58px;
-  line-height: 1;
-}
-
-.internText {
-  font-family: "Poppins", sans-serif;
-  color: white;
-  justify-content: start;
-  text-align: justify;
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.buttonLanding {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  padding: 10px 40px;
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.buttonLanding:hover {
-  background-color: black;
-  color: white;
-}
 @keyframes blink {
   0%, 100% {
     opacity: 10;
@@ -117,8 +81,6 @@ body {
 .blinking {
   animation: blink 1s infinite;
 }
-
-
 
 .box {
   position: absolute;
