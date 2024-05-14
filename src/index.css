@@ -13,6 +13,8 @@ body {
   height: 100vh;
   width: 100%;
   background: #212121;
+  /* background: url(unnamed.jpg) no-repeat;
+  background-size: cover; */
   display: flex;
 }
 
@@ -50,3 +52,208 @@ body {
   margin-top: 1vh;
 }
 
+/* .slogan {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  justify-content: start;
+  text-align: justify;
+  margin-left: 150px;
+  margin-top: 1vh;
+  font-size:70px;
+  line-height: 0.9;
+} */
+
+
+
+
+.slogan {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+  justify-content: start;
+  text-align: justify;
+  margin-left: 15%;
+  margin-top: 1vh;
+  font-size: 4vw; /* Alterado para unidades vw (viewport width) */
+  line-height: 0.9;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+  .slogan {
+    font-size: 6vw; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-left: 5%;
+  }
+}
+
+/* Media query para telas muito pequenas */
+@media (max-width: 480px) {
+  .slogan {
+    font-size: 8vw; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-left: 2%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 10;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+/* .button_login {
+  width: 115%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0 0.1);
+  cursor: pointer;
+  font-size: 19px;
+  color: #333;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 35px;
+  margin-right: 100px;
+  width: 100px;
+  height: 70px;
+
+} */
+
+.button_login {
+  width: 115%;
+  max-width: 300px;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 19px;
+  color: #333;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 35px;
+  margin-right: 10%;
+  width: 100px;
+  height: 70px;
+}
+
+@media (max-width: 768px) {
+  .button_login {
+    font-size: 3vw;
+  }
+
+  .box {
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .button_login {
+    font-size: 4vw;
+  }
+
+  .box {
+    margin-right: 2%;
+  }
+}
+
+
+
+.card {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 200px;
+  height: 320px;
+  background: #C6C6D0;
+  color: #212121;
+  box-shadow: inset 0 0 0 4px #212121;
+  transition: .6s 0.4s;
+  cursor: pointer;
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+}
+
+.border line {
+  stroke-width: 4px;
+  stroke: #C6C6D0;
+  fill: none;
+  transition: .6s ease-in-out;
+}
+
+.border line.top,
+.border line.bottom {
+  stroke-dasharray: 200;
+}
+
+.border line.left,
+.border line.right {
+  stroke-dasharray: 320;
+}
+
+.logo {
+  width: 50%;
+  margin: auto;
+  fill: #212121;
+  transition: .6s;
+  opacity: 0.9;
+}
+
+.card:hover {
+  background-color: transparent;
+  transition-delay: 0s;
+}
+
+.card:hover .border line {
+  transition-delay: 0.1s;
+}
+
+.card:hover .border line.top {
+  transform: translateX(-400px);
+}
+
+.card:hover .border line.bottom {
+  transform: translateX(400px);
+}
+
+.card:hover .border line.left {
+  transform: translateY(640px);
+}
+
+.card:hover .border line.right {
+  transform: translateY(-640px);
+}
+
+.card:hover .logo {
+  transition-delay: 0s;
+  transform: scale(1.1);
+  fill: #C6C6D0;
+  filter: drop-shadow( 0 0 30px #C6C6D080);
+  opacity: 0.9;
+}
