@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 import LoginButton from "../Components/LoginButton";
 import "../index.css";
 
-const Home = () => {
+const LandingView = () => {
   return (
     <div className="App">
       <div className="cursor"></div>
@@ -22,7 +22,11 @@ const Home = () => {
           <span className="text-subtitle mt-4">Para empreendedores</span>
         </Navbar>
       </div>
-
+      <div className="slogan div_login box">
+        <Link to="/login">
+          <LoginButton />
+        </Link>
+      </div>
       <Container>
         <Row>
           <Col lg={8}>
@@ -31,11 +35,6 @@ const Home = () => {
                 Para todos que <br /> desejam anunciar <br /> seus produtos
                 <span className="blinking">.</span>
               </p>
-              <div className="div_login box">
-                <Link to="/login">
-                  <LoginButton />
-                </Link>
-              </div>
             </div>
           </Col>
           <Col lg={6}>
@@ -59,41 +58,48 @@ const Home = () => {
         </Row>
       </Container>
 
-      <div className="card" style={{ marginTop: "100px" }}>
-        <svg
-          height="100%"
-          width="100%"
-          className="border"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line y2="0" x2="600" y1="0" x1="0" className="top"></line>
-          <line y2="-960" x2="0" y1="320" x1="0" className="left"></line>
-          <line y2="320" x2="-600" y1="320" x1="200" className="bottom"></line>
-          <line y2="960" x2="200" y1="0" x1="200" className="right"></line>
-        </svg>
-        <div className="logo">
-          <svg
-            className="logo-svg"
-            viewBox="0 0 29.667 31.69"
-            xmlns="http://www.w3.org/2000/svg"
+      <Row>
+        <Col lg={12} md={12} sm={12}>
+          <div className="digitalSignage">
+            <div className="cardDigital" style={{ marginTop: "50px" }}>
+              <div className="logo">AD'Screen</div>
+            </div>
+          </div>
+        </Col>
+      </Row>
+
+      <Container>
+        <Row>
+          <Col lg={6}>
+            <div className="slogan-vendas">
+              <p>
+                Anunciantes que usam Ad´Screen notam um grande aumento de
+                vendas!
+              </p>
+            </div>
+            <div className="internText">
+              <span>
+                ou para aqueles que buscam otimizar a experiência de seu
+                ambiente, nós somos a aplicação que possibilita os usuário
+                divulgarem seus produtos em empresas locadoras paceiras. Ao
+                contrário de anúncios convencionais e pouco efetivos, nosso
+                produto melhora a eficiência dos anúncios bem como democratizar
+                o acesso à eles.
+              </span>
+            </div>
+          </Col>
+          <Col
+            lg={6}
+            className="d-flex justify-content-center align-items-center"
           >
-            <path
-              transform="translate(0 0)"
-              d="M12.827,1.628A1.561,1.561,0,0,1,14.31,0h2.964a1.561,1.561,0,0,1,1.483,1.628v11.9a9.252,9.252,0,0,1-2.432,6.852q-2.432,2.409-6.963,2.409T2.4,20.452Q0,18.094,0,13.669V1.628A1.561,1.561,0,0,1,1.483,0h2.98A1.561,1.561,0,0,1,5.947,1.628V13.191a5.635,5.635,0,0,0,.85,3.451,3.153,3.153,0,0,0,2.632,1.094,3.032,3.032,0,0,0,2.582-1.076,5.836,5.836,0,0,0,.816-3.486Z"
-            ></path>
-            <path
-              transform="translate(-45.91 0)"
-              d="M75.207,20.857a1.561,1.561,0,0,1-1.483,1.628h-2.98a1.561,1.561,0,0,1-1.483-1.628V1.628A1.561,1.561,0,0,1,70.743,0h2.98a1.561,1.561,0,0,1,1.483,1.628Z"
-            ></path>
-            <path
-              transform="translate(0 -51.963)"
-              d="M0,80.018A1.561,1.561,0,0,1,1.483,78.39h26.7a1.561,1.561,0,0,1,1.483,1.628v2.006a1.561,1.561,0,0,1-1.483,1.628H1.483A1.561,1.561,0,0,1,0,82.025Z"
-            ></path>
-          </svg>
-        </div>
-      </div>
+            <div className="grafico"></div>
+          </Col>
+        </Row>
+      </Container>
+
+      <div className="footer"></div>
     </div>
   );
 };
 
-export default Home;
+export default LandingView;
