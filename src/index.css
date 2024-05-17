@@ -2,7 +2,9 @@
   text-align: center;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -28,17 +30,37 @@ body {
   z-index: 5000;
 }
 
+.landingImage {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+  z-index: -1;
+  border-bottom-left-radius: 999%;
+  border-bottom-right-radius: 80%;
+  overflow: hidden;
+  background-image: linear-gradient(
+      190deg,
+      rgba(255, 255, 255, 0) 0%,
+      #212121 55%
+    ),
+    url(https://i.pinimg.com/originals/38/c8/8a/38c88afe39a2a996a176d94c555f8bdf.jpg);
+  background-size: auto, cover;
+  background-position: bottom, center;
+  background-repeat: no-repeat;
+  margin-bottom: -200px;
+}
+
 .cursor.hover {
   transform: translate(-50%, -50%) scale(4);
 }
 
 .text-title {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 45px;
-    font-style: italic;
-    color: white;
-    margin-left: 5vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+  font-style: italic;
+  color: white;
+  margin-left: 5vh;
 }
 
 .text-subtitle {
@@ -50,3 +72,175 @@ body {
   margin-top: 1vh;
 }
 
+.slogan {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+  justify-content: start;
+  text-align: start;
+  font-size: 58px;
+  line-height: 1;
+}
+
+.slogan-vendas {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  justify-content: start;
+  text-align: start;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.internText {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  justify-content: start;
+  text-align: justify;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.buttonLanding {
+  margin-bottom: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 10px 40px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.digitalSignage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -10;
+  width: 100%;
+  background-size: cover;
+  background-position: 10%;
+  height: 420px;
+  background-image: url(https://i.pinimg.com/originals/38/c8/8a/38c88afe39a2a996a176d94c555f8bdf.jpg);
+  animation: backgroundSlider 9s infinite;
+  margin-bottom: 10vh;
+}
+
+@keyframes backgroundSlider {
+  0% {
+    background-image: url("https://i.pinimg.com/originals/38/c8/8a/38c88afe39a2a996a176d94c555f8bdf.jpg");
+  }
+  33.33% {
+    background-image: url("https://th.bing.com/th/id/OIP.wWILW2n_Vfdim_1g30B_KgHaEK?w=551&h=310&rs=1&pid=ImgDetMain");
+  }
+  66.66% {
+    background-image: url("https://theadfocus.com/wp-content/uploads/2022/03/Times-Square-andreas-m-unsplash-scaled.jpg");
+  }
+  100% {
+    background-image: url("https://i.pinimg.com/originals/38/c8/8a/38c88afe39a2a996a176d94c555f8bdf.jpg");
+  }
+}
+
+.buttonLanding:hover {
+  background-color: black;
+  color: white;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 10;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 35px;
+  margin-right: 100px;
+  width: 100px;
+  height: 70px;
+}
+
+.cardDigital {
+  margin-bottom: 50px;
+  display: flex;
+  width: 200px;
+  height: 320px;
+  background: #c6c6d0;
+  color: #212121;
+  box-shadow: inset 0 0 0 4px #444444;
+  transition: 0.6s 0.4s;
+  cursor: pointer;
+}
+
+.grafico {
+  width: 63%;
+  height: 100%;
+  background-position: center;
+  background: url("../public/grafico.png");
+}
+
+.footer {
+  height: 20vh;
+  width: 100%;
+  background: #212121;
+}
+
+.border {
+  position: absolute;
+  inset: 0;
+}
+
+.border line {
+  stroke-width: 4px;
+  stroke: #c6c6d0;
+  fill: none;
+  transition: 0.6s ease-in-out;
+}
+
+.border line.top,
+.border line.bottom {
+  stroke-dasharray: 200;
+}
+
+.border line.left,
+.border line.right {
+  stroke-dasharray: 320;
+}
+
+.logo {
+  width: 50%;
+  margin: auto;
+  color: #212121;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  transition: 0.6s;
+  opacity: 0.9;
+}
+
+.cardDigital:hover {
+  background-color: rgba(29, 29, 29, 0.89);
+  transition-delay: 0s;
+}
+
+.cardDigital:hover .logo {
+  transition-delay: 0s;
+  transform: scale(1.1);
+  color: #c6c6d0;
+  filter: drop-shadow(0 0 30px #c6c6d080);
+  opacity: 0.9;
+}

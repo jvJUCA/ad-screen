@@ -1,0 +1,106 @@
+.loginButton,
+.loginButton *,
+.loginButton :after,
+.loginButton :before,
+.loginButton:after,
+.loginButton:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.loginButton {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000 !important;
+  background-image: none;
+  color: #fff !important;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 25%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.loginButton:disabled {
+  cursor: default;
+}
+
+.loginButton:-moz-focusring {
+  outline: auto;
+}
+
+.loginButton svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.loginButton [hidden] {
+  display: none;
+}
+
+.loginButton {
+  margin-top: 2vh;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 800;
+  overflow: hidden;
+  padding: 1vh 5vh;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.loginButton .original {
+  background: #fff;
+  color: #000;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.loginButton:hover .original {
+  transform: translateY(100%);
+}
+
+.loginButton .letters {
+  display: inline-flex;
+}
+
+.loginButton span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+}
+
+.loginButton span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.loginButton:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loginButton:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.loginButton:hover span:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.loginButton:hover span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.loginButton:hover span:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.loginButton:hover span:nth-child(6) {
+  transition-delay: 0.5s;
+}
