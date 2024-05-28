@@ -26,7 +26,7 @@ const LandingView = () => {
           <LoginButton />
         </Link>
       </div>
-      <Container>
+      <Container style={{ marginBottom: "10vh" }}>
         <Row>
           <Col lg={8}>
             <div className="slogan">
@@ -67,7 +67,7 @@ const LandingView = () => {
         </Col>
       </Row>
 
-      <Container>
+      <Container style={{ marginBottom: "100px" }}>
         <Row>
           <Col lg={6}>
             <div className="slogan-vendas">
@@ -92,6 +92,40 @@ const LandingView = () => {
             className="d-flex justify-content-center align-items-center"
           >
             <div className="grafico"></div>
+          </Col>
+        </Row>
+      </Container>
+
+      <Container>
+        <Row>
+          <Col
+            lg={6}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <div className="map">
+              <img src="mapPerson.svg" className="mapPerson" />
+            </div>
+          </Col>
+          <Col lg={6}>
+            <div className="slogan-vendas">
+              <p>Escolha a Localização Perfeita para o Seu Anúncio!</p>
+            </div>
+            <div className="internText">
+              <span>
+                Pontos turísticos, prédios comerciais, shoppings, eventos...
+                Anuncie por localização e faça seu anúncio ser visto por todos
+                da região! <br />
+                <br /> Independente de faixa etária, social ou até mesmo
+                financeira, com os anúncios por localização, você escolhe quando
+                e onde quer anunciar. Com poucos cliques e muita eficiência!
+              </span>
+              <Col
+                lg={12}
+                className="d-flex justify-content-center align-items-center mt-4"
+              >
+                <button className="buttonLanding">Ver locais disponíveis</button>
+              </Col>
+            </div>
           </Col>
         </Row>
       </Container>
