@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginView.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 
@@ -25,10 +25,14 @@ const LoginForm = () => {
             </label>
             <a href="#">Esqueci minha senha</a>
           </div>
-          <button type="submit">Login</button>
+          <Link to="/Home">
+            <button type="submit">Login</button>
+          </Link>
           <div className="register-link">
             <p>
-              Não tem uma conta? <Link to="/register">Registre-se</Link><br /> <br /><br />
+              Não tem uma conta? <Link to="/register">Registre-se</Link>
+              <br /> <br />
+              <br />
               <Link to="/">Página Inicial</Link>
             </p>
           </div>
