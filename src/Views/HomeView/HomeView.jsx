@@ -22,7 +22,7 @@ const Home = () => {
           >
             <img
               src="mapSorocity.svg"
-              className="map"
+              className="homeMap"
               alt="Map of Sorocity"
               fluid
             />
