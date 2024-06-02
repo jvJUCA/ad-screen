@@ -11,12 +11,13 @@ import "../../index.css";
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="App">
       <div className="cursor"></div>
       <Navbar expand="lg">
-        <span className="text-title mt-3 mb-5">Olá, Lucas</span>
+        <span className="text-title mt-3 mb-5">Olá, Usuário(a)</span>
         <Navbar.Collapse className="status">
           <Card
             onMouseOver={() => setShowMessage(true)}
@@ -35,7 +36,6 @@ const Home = () => {
       </Navbar>
 
       <Container>
-        br
         <Row className="mb-5">
           <Col lg={12}>
             <h2 className="text-title">Painel de Controle</h2>
@@ -112,9 +112,45 @@ const Home = () => {
         <Row className="mt-4">
           <Col lg={12} className="d-flex justify-content-center">
             <button className="buttonHome mx-2">Aumentar Anúncios</button>
-            <button className="buttonHome mx-2">Ver Relatório Completo</button>
+            <button className="buttonHome mx-2" onClick={() => setShowForm(prevState => !prevState)}>Criar Novo Anúncio</button>
           </Col>
         </Row>
+        {showForm && (
+          <Row className="mt-4">
+            <Col lg={12} className="d-flex justify-content-center">
+              <form>
+                <div className="mb-3">
+                  <label htmlFor="nomeAnuncio" className="form-label">Nome do Anúncio</label>
+                  <input type="text" className="form-control" placeholder="Nome" id="nomeAnuncio" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="duracaoSegundos" className="form-label">Duração em (s)</label>
+                  <input type="number" className="form-control" placeholder="Duração do seu Anúncio" id="duracaoSegundos" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="tempoDias" className="form-label">Qual período?</label>
+                  <input type="number" className="form-control" placeholder="Quantos dias?" id="tempoDias" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="localizacao" className="form-label">Localização em sua Cidade</label>
+                  <input type="text" className="form-control" placeholder="Qual Área?" id="localizacao" />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="arquivo" className="form-label">Upload de Arquivo</label>
+                  <input type="file" className="form-control" id="arquivo" />
+                </div>
+                <button type="submit" className="btn btn-primary">Enviar</button>
+              </form>
+            </Col>
+          </Row>
+        )}
+
+        <Row className="mt-4">
+          <Col lg={12} className="d-flex justify-content-center">
+            <button className="buttonHome mx-2">Visualizar Relatório Completo</button>
+          </Col>
+        </Row>
+
         <br />
         <br />
       </Container>
