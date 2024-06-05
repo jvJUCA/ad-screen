@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../index.css"
 import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import LandingView from "../Views/LandingView.jsx";
@@ -6,6 +7,7 @@ import About from "../Views/About.jsx";
 import Home from "../Views/HomeView/HomeView.jsx";
 import Login from "../Views/LoginForm/LoginView.jsx";
 import Register from "../Views/RegisterForm/RegisterView.jsx";
+import PricingTable from "../Views/PricingTable/PricingTable.jsx"
 
 const Rotas = () => {
   useEffect(() => {
@@ -28,6 +30,7 @@ const Rotas = () => {
     <>
       <Routes>
         <Route path="/" element={<LandingView />} />
+        <Route path="/Pricing" element={<PricingTable />} />
         <Route path="/About" element={<About />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />

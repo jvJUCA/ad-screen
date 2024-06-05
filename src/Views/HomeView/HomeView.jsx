@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Navbar from "react-bootstrap/Navbar";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import "./HomeView.css";
 import "../../index.css";
 
@@ -111,7 +111,7 @@ const Home = () => {
         </Row>
         <Row className="mt-4">
           <Col lg={12} className="d-flex justify-content-center">
-            <button className="buttonHome mx-2">Aumentar Anúncios</button>
+            <button onClick={() => window.location.href = '/Pricing' } className="buttonHome mx-2">Aumentar Anúncios</button>
             <button className="buttonHome mx-2" onClick={() => setShowForm(prevState => !prevState)}>Criar Novo Anúncio</button>
           </Col>
         </Row>
