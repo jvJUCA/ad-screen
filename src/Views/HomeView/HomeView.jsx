@@ -8,7 +8,6 @@ import Card from "react-bootstrap/Card";
 import "./HomeView.css";
 import "../../index.css";
 
-
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [showForm, setShowForm] = useState(false);
@@ -24,13 +23,11 @@ const Home = () => {
             onMouseOut={() => setShowMessage(false)}
           >
             <Card.Body>
-              <Card.Title className="text-card">Status  😁</Card.Title>
+              <Card.Title className="text-card">Status 😁</Card.Title>
             </Card.Body>
           </Card>
           {showMessage && (
-            <div className="message">
-              Suas vendas estão decolando! 🚀💸
-            </div>
+            <div className="message">Suas vendas estão decolando! 🚀💸</div>
           )}
         </Navbar.Collapse>
       </Navbar>
@@ -39,17 +36,18 @@ const Home = () => {
         <Row className="mb-5">
           <Col lg={12}>
             <h2 className="text-title">Painel de Controle</h2>
-            <br /><br />
+            <br />
+            <br />
             <Row>
               <Col lg={4}>
                 <Card className="h-100">
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>Total de Vendas</Card.Title>
                     <Card.Text className="card-green text-card">
-                      <span style={{ color: 'black' }}>Junho:</span> 1,234
+                      <span style={{ color: "black" }}>Junho:</span> 1,234
                     </Card.Text>
                     <Card.Text className="card-red text-card">
-                      <span style={{ color: 'black' }}>Maio:</span> 806
+                      <span style={{ color: "black" }}>Maio:</span> 806
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -70,9 +68,7 @@ const Home = () => {
                   <Card.Body className="d-flex flex-column">
                     <Card.Title>Novos Clientes</Card.Title>
                     <br />
-                    <Card.Text className="text-card">
-                      123 📈
-                    </Card.Text>
+                    <Card.Text className="text-card">123 📈</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>
@@ -92,7 +88,6 @@ const Home = () => {
               alt="Map of Sorocity"
               fluid
             />
-
           </Col>
           <Col
             lg={5}
@@ -111,8 +106,18 @@ const Home = () => {
         </Row>
         <Row className="mt-4">
           <Col lg={12} className="d-flex justify-content-center">
-            <button onClick={() => window.location.href = '/Pricing' } className="buttonHome mx-2">Aumentar Anúncios</button>
-            <button className="buttonHome mx-2" onClick={() => setShowForm(prevState => !prevState)}>Criar Novo Anúncio</button>
+            <button
+              onClick={() => (window.location.href = "/Pricing")}
+              className="buttonHome mx-2"
+            >
+              Aumentar Anúncios
+            </button>
+            <button
+              className="buttonHome mx-2"
+              onClick={() => setShowForm((prevState) => !prevState)}
+            >
+              Criar Novo Anúncio
+            </button>
           </Col>
         </Row>
         {showForm && (
@@ -120,26 +125,58 @@ const Home = () => {
             <Col lg={12} className="d-flex justify-content-center">
               <form>
                 <div className="mb-3">
-                  <label htmlFor="nomeAnuncio" className="form-label">Nome do Anúncio</label>
-                  <input type="text" className="form-control" placeholder="Nome" id="nomeAnuncio" />
+                  <label htmlFor="nomeAnuncio" className="form-label">
+                    Nome do Anúncio
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Nome"
+                    id="nomeAnuncio"
+                  />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="duracaoSegundos" className="form-label">Duração em (s)</label>
-                  <input type="number" className="form-control" placeholder="Duração do seu Anúncio" id="duracaoSegundos" />
+                  <label htmlFor="duracaoSegundos" className="form-label">
+                    Duração em (s)
+                  </label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    placeholder="Duração do seu Anúncio"
+                    id="duracaoSegundos"
+                  />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="tempoDias" className="form-label">Qual período?</label>
-                  <input type="number" className="form-control" placeholder="Quantos dias?" id="tempoDias" />
+                  <label htmlFor="tempoDias" className="form-label">
+                    Qual período?
+                  </label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    placeholder="Quantos dias?"
+                    id="tempoDias"
+                  />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="localizacao" className="form-label">Localização em sua Cidade</label>
-                  <input type="text" className="form-control" placeholder="Qual Área?" id="localizacao" />
+                  <label htmlFor="localizacao" className="form-label">
+                    Localização em sua Cidade
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Qual Área?"
+                    id="localizacao"
+                  />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="arquivo" className="form-label">Upload de Arquivo</label>
+                  <label htmlFor="arquivo" className="form-label">
+                    Upload de Arquivo
+                  </label>
                   <input type="file" className="form-control" id="arquivo" />
                 </div>
-                <button type="submit" className="btn btn-primary">Enviar</button>
+                <button type="submit" className="btn btn-primary">
+                  Enviar
+                </button>
               </form>
             </Col>
           </Row>
@@ -147,7 +184,9 @@ const Home = () => {
 
         <Row className="mt-4">
           <Col lg={12} className="d-flex justify-content-center">
-            <button className="buttonHome mx-2">Visualizar Relatório Completo</button>
+            <button className="buttonHome mx-2">
+              Visualizar Relatório Completo
+            </button>
           </Col>
         </Row>
 
