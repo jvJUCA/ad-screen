@@ -184,9 +184,13 @@ const Home = () => {
 
         <Row className="mt-4">
           <Col lg={12} className="d-flex justify-content-center">
-            <button className="buttonHome mx-2">
+            <a
+              href="https://www.dropbox.com/scl/fi/8c0xqdeekebg7qpcxwne3/digital_signage_accesses_example-2.xlsx?dl=1"
+              download="Ad-Screen-Relatorio.xlsx"
+              className="buttonHome"
+            >
               Visualizar Relatório Completo
-            </button>
+            </a>
           </Col>
         </Row>
 
