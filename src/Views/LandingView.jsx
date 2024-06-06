@@ -52,7 +52,7 @@ const LandingView = () => {
             lg={6}
             className="d-flex justify-content-center align-items-center"
           >
-            <button className="buttonLanding">Quero Anunciar</button>
+            <Link to="/login" className="buttonLanding">Quero Anunciar</Link>
           </Col>
         </Row>
       </Container>
@@ -123,7 +123,7 @@ const LandingView = () => {
                 lg={12}
                 className="d-flex justify-content-center align-items-center mt-4"
               >
-                <button className="buttonLanding">Ver locais disponíveis</button>
+                <Link to="/login" className="buttonLanding">Ver locais disponíveis</Link>
               </Col>
             </div>
           </Col>
